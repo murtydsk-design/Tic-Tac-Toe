@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+#msg{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.5rem;
+    color: #00f3ff;
+    margin-top: 1rem;
+}
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  gap: 1rem;
+  height: 55px;
+  margin: 10px;
+  
+  
+  color: #ffffff;
+  /* Stepped 3D pixel bevel + Cyan backlight */
+  text-shadow:
+    2px 2px 0px #00f3ff,
+    4px 4px 0px #0e7490,
+    6px 6px 0px #164e63,
+    0 0 25px rgba(0, 243, 255, 0.6);
+}
+
+body{
+    background-color: #121212;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+    background-color: #1b1c22;
+    border-radius: 1rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 243, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.08);
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;  
+    box-shadow: 0 0 1rem rgba(0, 243, 255, 0.2);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 3rem; 
+    color: #00f3ff;
+    background-color: #1a2130;
+    border: 1px solid rgba(0, 243, 255, 0.15);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.box:hover:not(:disabled) {
+    background-color: #222c40;
+    box-shadow: 0 0 1.5rem rgba(0, 243, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+.box:disabled {
+    cursor: default;
+}
+
+.reset-button{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.5rem;
+    background-color: #00f3ff;
+    color: #121212;
+    border: none;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0, 243, 255, 0.2);
+}
+.reset-button:active {
+  background-color: #00cbd6; /* Slightly darker cyan */
+  box-shadow: 0 0 0.5rem rgba(0, 243, 255, 0.4); /* Tightened shadow on press */
+  transform: scale(0.96); /* Subtle physical press down */
+}
+
+.hide{
+    display: none;
+}
